@@ -1,0 +1,18 @@
+:root { 
+    --c-accent: #B01736;
+    --c-accent-alt: #A30C33;
+    --c-accent-alt-2: #CB0F41;
+    --c-dark: #444444;
+        
+    @include desktop {
+      --section-padding-y: 50px;
+    }
+  
+    @include mobile {
+      --section-padding-y: 30px;
+    }
+}
+
+.rotated {
+  transform: rotate(180deg); 
+}
