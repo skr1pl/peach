@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Softline - IT-решения для цифровой трансформации</title>
     <link rel="stylesheet" href="./dist/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body>
     <header class="header container">
@@ -27,7 +28,7 @@
 
         <section class="map container">
             <div class="map__header">
-                <button class="map__header__more">
+                <button class="map__header__more" id="toggleCities">
                     Офисы Softline
                     <img src="./assets/svg/arrow-down.svg" alt ="Стрелка вниз"/>
                 </button>
@@ -43,7 +44,54 @@
                     <a href="#">Дальний восток</a>
                 </nav>
             </div>
-            <img class="map__img" src="./assets/img/all_map.png" alt="Карта"/>
+            <div class="map__panel container" id="mapPanel">
+                <div class="map__panel__column">
+                    <p>Москва</p>
+                </div>
+                <div class="map__panel__column">
+                    <p>Центр</p>
+                    <p>Воронеж</p>
+                    <p>Ярославль</p>
+                    <p>Белгород</p>
+                </div>
+                <div class="map__panel__column">
+                    <p>Юг</p>
+                    <p>Ростов-на-Дону</p>
+                    <p>Краснодар</p>
+                    <p>Волгоград</p>
+                </div>
+                <div class="map__panel__column">
+                    <p>Волга</p>
+                    <p>Казань</p>
+                    <p>Самара</p>
+                    <p>Уфа</p>
+                    <p>Оренбург</p>
+                    <p>Нижний Новгород</p>
+                </div>
+                <div class="map__panel__column">
+                    <p>Урал</p>
+                    <p>Екатеринбург</p>
+                    <p>Челябинск</p>
+                    <p>Пермь</p>
+                    <p>Сургут</p>
+                    <p>Тюмень</p>
+                    <p>Ижевск</p>
+                </div>
+                <div class="map__panel__column">
+                    <p>Сибирь</p>
+                    <p>Новосибирск</p>
+                    <p>Омск<p>
+                    <p>Томск</p>
+                    <p>Красноярск</p>
+                    <p>Иркутск</p>
+                </div>
+                <div class="map__panel__column">
+                    <p>Дальний восток</p>
+                    <p>Хабаровск</p>
+                    <p>Владивосток<p>
+                </div>
+            </div>
+            <img class="map__img" id="mapImage" src="./assets/img/all_map.png" alt="Карта"/>
         </section>
 
         <section class="mission container">
@@ -57,28 +105,47 @@
                 <div class="directions__navigator__item">
                     <img src ="assets/img/softline_solutions.png" alt="Решения softline">
                     <div class="directions__navigator__item__text">
-                        Решения Softline
+                        <h3>Решения Softline</h3>
+                        <p>
+                            ГК Softline предлагает клиентам собственную линейку оборудования (ПК, серверы, торговое оборудование и проч.), разработку программных продуктов, облачных решений, решений в области информационной безопасности.
+                        </p>
+
                     </div>
                 </div>
                 <div class="directions__navigator__item">
                     <img src ="assets/img/cybersecurity.png" alt="Кибербезопасность"/>
-                    <div class="directions__navigator__item__text">Кибербезопасность</div>
+                    <div class="directions__navigator__item__text">
+                        <h3>Кибербезопасность</h3>
+                        <p>Softline обладает всеми необходимыми государственными лицензиями для организации проектов по информационной безопасности и аттестации. </p>
+                    </div>
                 </div>
                 <div class="directions__navigator__item">
                     <img src ="assets/img/import_substitution.png" alt="Импортозамещение"/>
-                    <div class="directions__navigator__item__text">Импортозамещение</div>
+                    <div class="directions__navigator__item__text">
+                        <h3>Импортозамещение</h3>
+                        <p>ГК Softline обладает широчайшим портфелем решений и услуг для импортозамещения, включая ПО и оборудование собственного производства.</p>
+                    </div>
                 </div>
                 <div class="directions__navigator__item">
                     <img src ="assets/img/cloud_solutions.png" alt="Облачные решения"/>
-                    <div class="directions__navigator__item__text">Облачные решения</div>
+                    <div class="directions__navigator__item__text">
+                        <h3>Облачные решения</h3>
+                        <p>Softline использует современные облачные решения как российских, так и международных вендоров для масштабирования бизнеса своих клиентов. Подписки, услуги, трансформация.</p>
+                    </div>
                 </div>
                 <div class="directions__navigator__item">
                     <img src ="assets/img/digital_transformation.png" alt="Цифровая трансформация и разработка ПО"/>
-                    <div class="directions__navigator__item__text">Цифровая трансформация <br/> и разработка ПО</div>
+                    <div class="directions__navigator__item__text directions__navigator__item__text--small-padding">
+                        <h3>Цифровая трансформация <br/> и разработка ПО</h3>
+                        <p>Softline использует современные технологи и новые возможности для увеличения производительности бизнеса заказчика. В штате ГК Softline - 2000+ разработчиков, которые трансформируют ПО под нужды конкретного предприятия.</p>
+                    </div>
                 </div>
                 <div class="directions__navigator__item">
                     <img src ="assets/img/technical_support.png" alt="Техническая поддержка Softline"/>
-                    <div class="directions__navigator__item__text">Техническая поддержка Softline</div>
+                    <div class="directions__navigator__item__text">
+                        <h3>Техническая поддержка Softline</h3>
+                        <p>200+ инженеров, 24 часа в сутки, 7 дней в неделю, 12 месяцев в году, сервисное партнерство с 30+ мировыми производителями.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -125,28 +192,44 @@
                 </div>
             </div>
         </section>
-
         <section class="life">
             <div class="life__header">
-                <h2>Корпоративная жизнь</h2> 
+                <h2>Корпоративная жизнь</h2>
                 <div class="life__header__btns">
-                    <button>
-                        <img src="./assets/svg/left-btn.svg" alt="Стрелка влево"/>
-                    </button>
-                    <button class="rotated">
-                        <img src="./assets/svg/left-btn.svg" alt="Стрелка влево"/>
-                    </button>
+                <div class="swiper-button-prev">
+                    <img src="./assets/svg/left-btn.svg" alt="Стрелка влево" />
+                </div>
+                <div class="swiper-button-next">
+                    <img class="rotated" src="./assets/svg/left-btn.svg" alt="Стрелка вправо" />
+                </div>
                 </div>
             </div>
-            <img class="life__img" src="assets/img/slide2.png" alt="Слайд2">
-            <div class="life__slider">
-                <div class="life__slide active"></div>
-                <div class="life__slide"></div>
-                <div class="life__slide"></div>
-                <div class="life__slide"></div>
-                <div class="life__slide"></div>
+
+            <div class="swiper life__swiper">
+                <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img class="life__img" src="assets/img/slide1.png" alt="Слайд 1" />
+                </div>
+                <div class="swiper-slide">
+                    <img class="life__img" src="assets/img/slide2.png" alt="Слайд 2" />
+                </div>
+                <div class="swiper-slide">
+                    <img class="life__img" src="assets/img/slide3.png" alt="Слайд 3" />
+                </div>
+                <div class="swiper-slide">
+                    <img class="life__img" src="assets/img/slide4.png" alt="Слайд 4" />
+                </div>
+                <div class="swiper-slide">
+                    <img class="life__img" src="assets/img/slide5.png" alt="Слайд 5" />
+                </div>
+                </div>
             </div>
+
+            <div class="life__slider swiper-pagination"></div>
         </section>
+
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html> 

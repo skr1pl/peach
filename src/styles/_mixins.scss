@@ -40,15 +40,15 @@
   aspect-ratio: 1;
 }
 
-@mixin adaptive-width($min, $max) {
+@mixin adaptive-width($max, $min) {
   width: clamp(#{$min}px, #{$max / 1440 * 100}vw, #{$max}px);
 }
 
-@mixin adaptive-height($min, $max) {
+@mixin adaptive-height($max, $min) {
   height: clamp(#{$min}px, #{$max / 1440 * 100}vw, #{$max}px);
 }
 
-@mixin adaptive-padding($min, $max) {
+@mixin adaptive-padding($max, $min) {
   padding: clamp(#{$min}px, #{$max / 1440 * 100}vw, #{$max}px);
 }
   

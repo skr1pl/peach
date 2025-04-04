@@ -1,118 +1,123 @@
-// Импорт стилей Swiper
-import 'swiper/css';
+document.addEventListener("DOMContentLoaded", function () {
+    const button = document.querySelector("#toggleCities");
+    const panel = document.querySelector("#mapPanel");
 
-// Функция для анимации появления элементов при скролле
-const observeElements = () => {
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('fade-in');
-                observer.unobserve(entry.target);
+    button.addEventListener("click", function () {
+        panel.classList.toggle("active");
+    });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const images = [
+        "assets/img/slide1.png",
+        "assets/img/slide2.png",
+        "assets/img/slide3.png",
+        "assets/img/slide4.png",
+        "assets/img/slide5.png"
+    ];
+
+    let currentIndex = 0;
+    const imageElement = document.getElementById("lifeImage");
+    const dots = document.querySelectorAll(".life__slide");
+
+    const updateSlide = (index, direction = "right") => {
+        imageElement.classList.remove("slide-left", "slide-right");
+
+        setTimeout(() => {
+            imageElement.src = images[index];
+            imageElement.classList.add(direction === "right" ? "slide-right" : "slide-left");
+        }, 50);
+
+        dots.forEach(dot => dot.classList.remove("active"));
+        dots[index].classList.add("active");
+    };
+
+    const nextSlide = () => {
+        currentIndex = (currentIndex + 1) % images.length;
+        updateSlide(currentIndex, "right");
+    };
+
+    const prevSlide = () => {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        updateSlide(currentIndex, "left");
+    };
+
+    document.getElementById("nextSlide").addEventListener("click", nextSlide);
+    document.getElementById("prevSlide").addEventListener("click", prevSlide);
+
+    setInterval(() => {
+        nextSlide();
+    }, 3000);
+});
+
+const lifeSwiper = new Swiper('.life__swiper', {
+    loop: true,
+    speed: 800,
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        renderBullet: function (index, className) {
+            return `<div class="${className}"></div>`;
+        }
+    },
+    effect: 'slide',
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const tabs = document.querySelectorAll('.map__header__navbar a');
+    const mapImage = document.getElementById('mapImage');
+
+    const regionToImage = {
+        'Все': './assets/img/all_map.png',
+        'Москва': './assets/img/moscow_map.png',
+        'Центр': './assets/img/middle_map.png',
+        'Северо-Запад': './assets/img/northwest_map.png',
+        'Юг': './assets/img/south_map.png',
+        'Волга': './assets/img/volga_map.png',
+        'Урал': './assets/img/ural_map.png',
+        'Сибирь': './assets/img/siberia_map.png',
+        'Дальний восток': './assets/img/far_east_map.png'
+    };
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            // Активный таб
+            tabs.forEach(t => t.classList.remove('active_city'));
+            tab.classList.add('active_city');
+
+            // Меняем картинку
+            const region = tab.textContent.trim();
+            if (regionToImage[region]) {
+                mapImage.src = regionToImage[region];
             }
         });
-    }, {
-        threshold: 0.1
     });
 
-    document.querySelectorAll('.hero__title, .hero__description, .mission__title, .mission__text')
-        .forEach(el => observer.observe(el));
-};
+    // Панель по кнопке
+    const toggleBtn = document.getElementById('toggleCities');
+    const panel = document.getElementById('mapPanel');
 
-// Интерактивная карта
-class InteractiveMap {
-    constructor() {
-        this.mapContainer = document.querySelector('.map__container');
-        this.controls = document.querySelectorAll('.map__control');
-        this.activeRegion = 'all';
-        this.cities = {
-            all: [
-                { name: 'Москва', x: 57, y: 45 },
-                { name: 'Санкт-Петербург', x: 51, y: 35 },
-                { name: 'Новосибирск', x: 76, y: 52 },
-                { name: 'Екатеринбург', x: 71, y: 47 },
-                { name: 'Самара', x: 65, y: 48 },
-                { name: 'Казань', x: 62, y: 45 }
-            ],
-            moscow: [
-                { name: 'Москва', x: 57, y: 45 }
-            ],
-            center: [
-                { name: 'Воронеж', x: 58, y: 49 },
-                { name: 'Ярославль', x: 57, y: 42 },
-                { name: 'Белгород', x: 56, y: 51 }
-            ],
-            northwest: [
-                { name: 'Санкт-Петербург', x: 51, y: 35 },
-                { name: 'Калининград', x: 45, y: 38 }
-            ]
-        };
+    toggleBtn.addEventListener('click', () => {
+        panel.classList.toggle('active');
+    });
+});
 
-        this.init();
-    }
-
-    init() {
-        this.createMap();
-        this.addEventListeners();
-        this.updateCities();
-    }
-
-    createMap() {
-        this.mapContainer.innerHTML = `
-            <div class="map__image-container">
-                <img src="./assets/img/map.svg" alt="Карта России" class="map__image">
-            </div>
-        `;
-    }
-
-    addEventListeners() {
-        this.controls.forEach(control => {
-            control.addEventListener('click', () => {
-                const region = control.dataset.region;
-                this.setActiveRegion(region);
-            });
-        });
-    }
-
-    setActiveRegion(region) {
-        this.controls.forEach(control => {
-            control.classList.toggle('active', control.dataset.region === region);
-        });
-
-        this.activeRegion = region;
-        this.updateCities();
-    }
-
-    updateCities() {
-        // Удаляем существующие маркеры
-        const existingCities = this.mapContainer.querySelectorAll('.map__city');
-        existingCities.forEach(city => city.remove());
-
-        // Добавляем новые маркеры
-        const cities = this.cities[this.activeRegion];
-        cities.forEach(city => {
-            const cityElement = document.createElement('div');
-            cityElement.className = 'map__city';
-            cityElement.style.left = `${city.x}%`;
-            cityElement.style.top = `${city.y}%`;
-
-            const label = document.createElement('div');
-            label.className = 'map__city-label';
-            label.textContent = city.name;
-
-            cityElement.appendChild(label);
-            this.mapContainer.appendChild(cityElement);
-
-            // Добавляем анимацию появления
-            setTimeout(() => {
-                cityElement.style.opacity = '1';
-                cityElement.style.transform = 'translate(-50%, -50%) scale(1)';
-            }, 10);
-        });
-    }
-}
-
-// Инициализация при загрузке страницы
 document.addEventListener('DOMContentLoaded', () => {
-    observeElements();
-    new InteractiveMap();
-}); 
+    const toggleBtn = document.getElementById('toggleCities');
+    const mapPanel = document.getElementById('mapPanel');
+
+    toggleBtn.addEventListener('click', () => {
+        mapPanel.classList.toggle('active');
+    });
+});

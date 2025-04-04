@@ -1,0 +1,19 @@
+.header {
+    width: 100%;
+    height: 85px;
+    padding-inline: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    border: 1px solid #d9d9d9;
+
+    
+    
+    &__menu {
+      display: flex;
+      align-items: center;
+      column-gap: 20px;
+      font-weight: 600;
+    }
+}

@@ -1,0 +1,20 @@
+.hero {
+  width: 100%;
+  text-align: center;
+  margin-block: 79px;
+  padding-inline: 70px;
+  
+
+  h1 {
+    color: var(--c-accent);
+    line-height: 120%;
+    font-size: 56px;
+    font-weight: 700;
+  }
+
+  p {
+    margin-top: 30px;
+    font-size: 32px;
+    line-height: 120%;
+  }
+}
