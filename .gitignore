@@ -1,1 +1,25 @@
+# Зависимости
 node_modules/
+
+# Собранные файлы
+dist/
+
+# Системные файлы
+.DS_Store
+Thumbs.db
+
+# Логи
+*.log
+npm-debug.log*
+
+# IDE
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Локальные файлы
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
