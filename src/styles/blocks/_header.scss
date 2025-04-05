@@ -1,19 +1,46 @@
 .header {
+    @include fluid-text(18, 12);
     width: 100%;
     height: 85px;
+    max-height: 110px;
     padding-inline: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 20px;
+    flex-wrap: wrap;
     border: 1px solid #d9d9d9;
+    text-wrap: none;
+    font-weight: 600;
+  
+  
+    @include mobile {
+      padding-inline: 15px;
+    }
 
+    @include mobile-s {
+      height: 110px;
+      padding: 16px 8px 16px 5px;
+      // flex-direction: column;
+      row-gap: 16px;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
     
     
     &__menu {
       display: flex;
       align-items: center;
+      flex-wrap: wrap;
       column-gap: 20px;
-      font-weight: 600;
+
+
+      a {
+        white-space: nowrap;
+      }
+
+      @include mobile-s {
+        row-gap: 5px;
+        column-gap: 10px;
+      }
     }
 }

@@ -8,19 +8,31 @@ body {
     font-family: "Proxima", sans-serif;
     color: var(--c-dark);
     // padding-inline: 335px;
+
+    @include desktop {
+      padding-inline: 15px;
+    }
     
 }
-
-// button {
-//   padding: 10px 20px;
-// }
 
 .container {
   max-width: 1250px;
   width: 100%; 
   margin: 0 auto;
+
 }
 
 .rotated {
   transform: scaleX(-1);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

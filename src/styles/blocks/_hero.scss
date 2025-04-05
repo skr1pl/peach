@@ -1,20 +1,27 @@
 .hero {
+  @include adaptive-margin-top(79, 27);
+  @include adaptive-padding-inline(70, 5);
   width: 100%;
   text-align: center;
-  margin-block: 79px;
-  padding-inline: 70px;
   
 
   h1 {
+    @include fluid-text(56, 28);
     color: var(--c-accent);
     line-height: 120%;
-    font-size: 56px;
     font-weight: 700;
+    animation: fadeIn 0.5s ease-out forwards;
   }
 
   p {
-    margin-top: 30px;
-    font-size: 32px;
+    @include fluid-text(32, 16);
+    @include adaptive-margin-top(30, 10);
     line-height: 120%;
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  @include mobile {
+    padding-inline: 5px;
+    text-align: start;
   }
 }

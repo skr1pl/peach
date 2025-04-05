@@ -1,19 +1,30 @@
 .map {
   width: 100%;
-
+  margin-top: 79px;
 
   &__header {
-    width: 100%;
+    @include adaptive-padding-inline(70, 5);
     height: 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     border: none;
     box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.06);
-    padding-inline: 70px;
+
+    @include tablet {
+      height: 95px;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      text-wrap: nowrap;
+      padding-top: 18px;
+      line-height: 100%;
+      row-gap: 20px;
+    }
 
     &__more {
-      font-size: 24px;
+      @include fluid-text(24, 20);
+      padding: 0;
       font-weight: 600;
       line-height: 100%;
       display: flex;
@@ -28,41 +39,79 @@
       img {
         width: 24px;
         height: 24px;
+
+        @include tablet {
+          width: 20px;
+          height: 20px;
+        }
       }
     }
 
     &__navbar {
+      @include fluid-text(18, 14);
       display: flex;
       align-items: center;
       column-gap: 30px;
       line-height: 20px;
-      font-size: 18px; 
+      height: 80px;
+      overflow-x: auto;
+      scrollbar-width: none; 
+      -ms-overflow-style: none;
+      &::-webkit-scrollbar {
+        display: none; 
+      }
 
-      .active_city {
-        color: var(--c-accent-alt);
-        position: relative; 
+      @include tablet {
+        width: 100%;
+        padding-bottom: 5px;
+        column-gap: 16px;
+      }
 
-        &::after {
-          content: "";
-          position: absolute;
-          left: 0;
-          bottom: -3px; 
-          width: 100%;
-          height: 3px;
-          background-color: var(--c-accent-alt);
+      a {
+        position: relative;
+        white-space: nowrap;
+        padding-bottom: 32px;
+        transition: color 0.3s ease;
+        color: var(--c-text);
+        height: 100%;
+        display: flex;
+        align-items: flex-end;
+
+        @include tablet {
+          padding-bottom: 16px
+        }
+        &:hover {
+          color: var(--c-accent-alt);
+        }
+
+        &.active_city {
+          color: var(--c-accent-alt);
+
+          &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--c-accent-alt);
+            transition: all 0.3s ease;
+          }
         }
       }
     }
   }
 
   &__panel {
+    @include adaptive-padding-inline(68, 5);
+    @include adaptive-padding-block(30, 18);
     visibility: hidden;
     opacity: 0;
     transform: translateY(-10px);
     transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
     width: 100%;
+    max-width: 1250px;
     height: 272px;
-    padding: 30px 68.5px;
     display: flex;
     justify-content: space-between;
     box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.06);
@@ -70,34 +119,94 @@
     margin-top: 20px;
     background-color: #ffffff;
 
+    @include mobile {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+
     &.active {
       visibility: visible;
       opacity: 1;
       transform: translateY(0);
     }
 
+    .actived {
+      p {
+        display: flex;
+        opacity: 1;
+      }
+
+      .map__panel__column__btn {
+        img {
+          transform: rotate(180deg);
+        }
+        p {
+          color: var(--c-accent-alt);
+        }
+      }
+    }
+
     &__column {
+      transition: all 0.3s ease;
+      @include fluid-text(18, 14);
       font-weight: 400;
-      font-size: 18px;
       line-height: 20px;
       letter-spacing: 0;
 
+      @include mobile {
+        width: 33%;
+        p {
+          display: none;
+          opacity: 0;
+        }
+      }
+
       :nth-child(1) {
+        display: flex;
+        opacity: 1;
         font-weight: 600;
       }
 
       p {
         margin-bottom: 12px;
       }
+
+      &__btn {
+        padding: 0; 
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 3px;
+        margin-bottom: 12px;
+
+        p {
+          display: flex;
+          opacity: 1;
+          margin: 0;
+        }
+
+        img {
+          display: none;
+          opacity: 0;
+
+          @include mobile {
+            display: flex;
+            opacity: 1;
+          }
+        }
+      }
     }
-
-
   }
   
   &__img {
-    width: 1190px;
-    height: 604px;
-    margin-inline: 30px;
-    margin-top: 70px;
+    @include adaptive-margin-top(70, 10);
+    @include adaptive-margin-left(30, 0);
+    width: 90%;
+    max-width: 1190px;
+    // height: 604px;
+    height: auto;
+    object-fit: cover;
   }
+
+  
 }

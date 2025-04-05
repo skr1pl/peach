@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Softline - IT-решения для цифровой трансформации</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" crossorigin href="/assets/main-CdjPTw8y.css">
+</head>
+<body>
+    <header class="header container">
+        <div class="header__logo">
+            <img src="/assets/logo-DojQXc68.svg" alt="Softline">
+        </div>
+        <nav class="header__menu">
+            <a href="#" class="header__menu-item">Облачные решения</a>
+            <a href="#" class="header__menu-item">Кибербезопасность</a>
+            <a href="#" class="header__menu-item">Импортозамещение</a>
+            <a href="#" class="header__menu-item">Цифровая трансформация</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero container">
+            <h1 class="hero__title">Softline</h1>
+            <p class="hero__description">Ведущий поставщик IT-решений и сервисов.* Мы предлагаем комплексные IT-решения, облака, программное и аппаратное обеспечение, решения по цифровой  трансформации и кибербезопасности, а также широкий спектр IT-услуг.</p>
+        </section>
+
+        <section class="numbers container">
+            <div class="numbers__item">
+                <h3>>30 лет</h3>
+                <p>на IT-рынке</p>
+            </div>
+            <div class="numbers__item">
+                <h3>4600</h3>
+                <p>сотрудников в России</p>
+            </div>
+            <div class="numbers__item">
+                <h3>25</h3>
+                <p>городов России</p>
+            </div>
+            <div class="numbers__item">
+                <h3>2000+</h3>
+                <p>разработчиков</p>
+            </div>
+            <div class="numbers__item">
+                <h3>3000+</h3>
+                <p>сотрудников ежегодно проходят оценку и обучение</p>
+            </div>
+        </section>
+
+        <section class="map container">
+            <div class="map__header">
+                <button class="map__header__more" id="toggleCities">
+                    Офисы Softline
+                    <img src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M2.10156%207.99683L12.1016%2016.0179L22.1016%207.99683'%20stroke='%23444444'%20stroke-width='3'/%3e%3c/svg%3e" alt ="Стрелка вниз"/>
+                </button>
+                <nav class="map__header__navbar">
+                    <a class="active_city" href="#">Все</a>
+                    <a href="#">Москва</a>
+                    <a href="#">Центр</a>
+                    <a href="#">Северо-Запад</a>
+                    <a href="#">Юг</a>
+                    <a href="#">Волга</a>
+                    <a href="#">Урал</a>
+                    <a href="#">Сибирь</a>
+                    <a href="#">Дальний восток</a>
+                </nav>
+            </div>
+            <div class="map__panel container" id="mapPanel">
+                <div id="moscow" class="map__panel__column">
+                    <button class="map__panel__column__btn" id="moscowBtn">
+                        <p>Москва</p>
+                        <img src="data:image/svg+xml,%3csvg%20width='8'%20height='4'%20viewBox='0%200%208%204'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M4%204L7.4641%200.25H0.535898L4%204Z'%20fill='%23444444'/%3e%3c/svg%3e" alt='Стрелка вниз'/>
+                    </button>
+                </div>
+                <div id="center" class="map__panel__column">
+                    <button class="map__panel__column__btn" id="centerBtn">
+                        <p>Центр</p>
+                        <img src="data:image/svg+xml,%3csvg%20width='8'%20height='4'%20viewBox='0%200%208%204'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M4%204L7.4641%200.25H0.535898L4%204Z'%20fill='%23444444'/%3e%3c/svg%3e" alt='Стрелка вниз'/>
+                    </button>
+                    <p>Воронеж</p>
+                    <p>Ярославль</p>
+                    <p>Белгород</p>
+                </div>
+                <div id="northwest" class="map__panel__column">
+                    <button class="map__panel__column__btn" id="northwestBtn">
+                        <p>Северо-Запад</p>
+                        <img src="data:image/svg+xml,%3csvg%20width='8'%20height='4'%20viewBox='0%200%208%204'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M4%204L7.4641%200.25H0.535898L4%204Z'%20fill='%23444444'/%3e%3c/svg%3e" alt='Стрелка вниз'/>
+                    </button>
+                    <p>Санкт-Петербург</p>
+                    <p>Калининград</p>
+                </div>
+                <div id="south" class="map__panel__column">
+                    <button class="map__panel__column__btn" id="southBtn">
+                        <p>Юг</p>
+                        <img src="data:image/svg+xml,%3csvg%20width='8'%20height='4'%20viewBox='0%200%208%204'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M4%204L7.4641%200.25H0.535898L4%204Z'%20fill='%23444444'/%3e%3c/svg%3e" alt='Стрелка вниз'/>
+                    </button>
+                    <p>Ростов-на-Дону</p>
+                    <p>Краснодар</p>
+                    <p>Волгоград</p>
+                </div>
+                <div id="volga" class="map__panel__column">
+                    <button class="map__panel__column__btn" id="volgaBtn">
+                        <p>Волга</p>
+                        <img src="data:image/svg+xml,%3csvg%20width='8'%20height='4'%20viewBox='0%200%208%204'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M4%204L7.4641%200.25H0.535898L4%204Z'%20fill='%23444444'/%3e%3c/svg%3e" alt='Стрелка вниз'/>
+                    </button>
+                    <p>Казань</p>
+                    <p>Самара</p>
+                    <p>Уфа</p>
+                    <p>Оренбург</p>
+                    <p>Нижний Новгород</p>
+                </div>
+                <div id="ural" class="map__panel__column">
+                    <button class="map__panel__column__btn" id="uralBtn">
+                        <p>Урал</p>
+                        <img src="data:image/svg+xml,%3csvg%20width='8'%20height='4'%20viewBox='0%200%208%204'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M4%204L7.4641%200.25H0.535898L4%204Z'%20fill='%23444444'/%3e%3c/svg%3e" alt='Стрелка вниз'/>
+                    </button>
+                    <p>Екатеринбург</p>
+                    <p>Челябинск</p>
+                    <p>Пермь</p>
+                    <p>Сургут</p>
+                    <p>Тюмень</p>
+                    <p>Ижевск</p>
+                </div>
+                <div id="siberia" class="map__panel__column">
+                    <button class="map__panel__column__btn" id="siberiaBtn">
+                        <p>Сибирь</p>
+                        <img src="data:image/svg+xml,%3csvg%20width='8'%20height='4'%20viewBox='0%200%208%204'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M4%204L7.4641%200.25H0.535898L4%204Z'%20fill='%23444444'/%3e%3c/svg%3e" alt='Стрелка вниз'/>
+                    </button>
+                    <p>Новосибирск</p>
+                    <p>Омск<p>
+                    <p>Томск</p>
+                    <p>Красноярск</p>
+                    <p>Иркутск</p>
+                </div>
+                <div id="east" class="map__panel__column">
+                    <button class="map__panel__column__btn" id="eastBtn">
+                        <p>Дальний восток</p>
+                        <img src="data:image/svg+xml,%3csvg%20width='8'%20height='4'%20viewBox='0%200%208%204'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M4%204L7.4641%200.25H0.535898L4%204Z'%20fill='%23444444'/%3e%3c/svg%3e" alt='Стрелка вниз'/>
+                    </button>
+                    <p>Хабаровск</p>
+                    <p>Владивосток<p>
+                </div>
+            </div>
+            <img class="map__img" id="mapImage" src="/assets/all_map-CWhkfcFU.png" alt="Карта"/>
+        </section>
+
+        <section class="mission container">
+            <img class="mission__left" src="/assets/Left%20pattern-8Kh7nfbc.svg" alt="Левый патерн"/>
+            <img class="mission__right" src="/assets/Right%20pattern-DnhDCTIW.svg" alt="Правый патерн"/>
+            <h2 class="mission__title">Миссия Softline</h2>
+            <p class="mission__text">Мы помогаем организациям трансформироваться, работать эффективно и безопасно <br/> в условиях цифровой экономики.</p>
+        </section>
+
+        <section class="directions container">
+            <h2>Направления бизнесса</h2>
+            <div class="directions__navigator">
+                <div class="directions__navigator__item">
+                    <img class="directions__navigator__item__img" src ="/assets/softline_solutions-DVZtS13F.png" alt="Решения softline">
+                    <div class="directions__navigator__item__text">
+                        <div class="directions__navigator__item__text__title">
+                            <h3>Решения Softline</h3>
+                            <img src="data:image/svg+xml,%3csvg%20width='16'%20height='9'%20viewBox='0%200%2016%209'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.57153%200.785767L8.0001%207.21434L14.4287%200.785767'%20stroke='white'%20stroke-width='2'/%3e%3c/svg%3e" alt="Стрелка вниз">
+                        </div>
+                        <p>
+                            ГК Softline предлагает клиентам собственную линейку оборудования (ПК, серверы, торговое оборудование и проч.), разработку программных продуктов, облачных решений, решений в области информационной безопасности.
+                        </p>
+
+                    </div>
+                </div>
+                <div class="directions__navigator__item">
+                    <img class="directions__navigator__item__img" src ="/assets/cybersecurity-CSbt-svS.png" alt="Кибербезопасность"/>
+                    <div class="directions__navigator__item__text">
+                        <div class="directions__navigator__item__text__title">
+                            <h3>Кибербезопасность</h3>
+                            <img src="data:image/svg+xml,%3csvg%20width='16'%20height='9'%20viewBox='0%200%2016%209'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.57153%200.785767L8.0001%207.21434L14.4287%200.785767'%20stroke='white'%20stroke-width='2'/%3e%3c/svg%3e" alt="Стрелка вниз"/>
+                        </div>
+                        <p>Softline обладает всеми необходимыми государственными лицензиями для организации проектов по информационной безопасности и аттестации. </p>
+                    </div>
+                </div>
+                <div class="directions__navigator__item">
+                    <img class="directions__navigator__item__img" src ="/assets/import_substitution-DaEUkYlF.png" alt="Импортозамещение"/>
+                    <div class="directions__navigator__item__text">
+                        <div class="directions__navigator__item__text__title">
+                            <h3>Импортозамещение</h3>
+                            <img src="data:image/svg+xml,%3csvg%20width='16'%20height='9'%20viewBox='0%200%2016%209'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.57153%200.785767L8.0001%207.21434L14.4287%200.785767'%20stroke='white'%20stroke-width='2'/%3e%3c/svg%3e" alt="Стрелка вниз"/>
+                        </div>
+                        <p>ГК Softline обладает широчайшим портфелем решений и услуг для импортозамещения, включая ПО и оборудование собственного производства.</p>
+                    </div>
+                </div>
+                <div class="directions__navigator__item">
+                    <img class="directions__navigator__item__img" src ="/assets/cloud_solutions-U6kQu8Aw.png" alt="Облачные решения"/>
+                    <div class="directions__navigator__item__text">
+                        <div class="directions__navigator__item__text__title">
+                            <h3>Облачные решения</h3>
+                            <img src="data:image/svg+xml,%3csvg%20width='16'%20height='9'%20viewBox='0%200%2016%209'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.57153%200.785767L8.0001%207.21434L14.4287%200.785767'%20stroke='white'%20stroke-width='2'/%3e%3c/svg%3e" alt="Стрелка вниз"/>
+                        </div>
+                        <p>Softline использует современные облачные решения как российских, так и международных вендоров для масштабирования бизнеса своих клиентов. Подписки, услуги, трансформация.</p>
+                    </div>
+                </div>
+                <div class="directions__navigator__item">
+                    <img class="directions__navigator__item__img" src ="/assets/digital_transformation-D9KZGsH_.png" alt="Цифровая трансформация и разработка ПО"/>
+                    <div class="directions__navigator__item__text directions__navigator__item__text--small-padding">
+                        <div class="directions__navigator__item__text__title">
+                            <h3>Цифровая трансформация <br/> и разработка ПО</h3>
+                            <img src="data:image/svg+xml,%3csvg%20width='16'%20height='9'%20viewBox='0%200%2016%209'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.57153%200.785767L8.0001%207.21434L14.4287%200.785767'%20stroke='white'%20stroke-width='2'/%3e%3c/svg%3e" alt="Стрелка вниз"/>
+                        </div>
+                        <p>Softline использует современные технологи и новые возможности для увеличения производительности бизнеса заказчика. В штате ГК Softline - 2000+ разработчиков, которые трансформируют ПО под нужды конкретного предприятия.</p>
+                    </div>
+                </div>
+                <div class="directions__navigator__item">
+                    <img class="directions__navigator__item__img" src ="/assets/technical_support-C_iWo6KC.png" alt="Техническая поддержка Softline"/>
+                    <div class="directions__navigator__item__text">
+                        <div class="directions__navigator__item__text__title">
+                            <h3>Техническая поддержка Softline</h3>
+                            <img src="data:image/svg+xml,%3csvg%20width='16'%20height='9'%20viewBox='0%200%2016%209'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.57153%200.785767L8.0001%207.21434L14.4287%200.785767'%20stroke='white'%20stroke-width='2'/%3e%3c/svg%3e" alt="Стрелка вниз"/>
+                        </div>
+                        <p>200+ инженеров, 24 часа в сутки, 7 дней в неделю, 12 месяцев в году, сервисное партнерство с 30+ мировыми производителями.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="compensation">
+            <h2>Компенсационный пакет</h2>
+            <div class="compensation__items">
+                <div class="compensation__item">
+                    <img src="data:image/svg+xml,%3csvg%20width='110'%20height='110'%20viewBox='0%200%20110%20110'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3ccircle%20opacity='0.05'%20cx='55'%20cy='55'%20r='55'%20fill='black'/%3e%3cg%20opacity='0.9'%3e%3cpath%20d='M35.0341%2045.3129C35.2802%2043.3072%2036.9836%2041.8%2039.0044%2041.8H72.0023C74.0695%2041.8%2075.7961%2043.3751%2075.9855%2045.4335L78.5982%2073.8281C78.8139%2076.1721%2076.9689%2078.1946%2074.615%2078.1946H35.5207C33.1184%2078.1946%2031.258%2076.092%2031.5505%2073.7075L35.0341%2045.3129Z'%20stroke='%23B01736'%20stroke-width='2'/%3e%3cpath%20d='M55%2050.6367V69.3566'%20stroke='%23B01736'%20stroke-width='2'%20stroke-linecap='round'/%3e%3cpath%20d='M45.1523%2059.9971H64.8447'%20stroke='%23B01736'%20stroke-width='2'%20stroke-linecap='round'/%3e%3cpath%20d='M64.5984%2041.7996V35.5996C64.5984%2033.3905%2062.8076%2031.5996%2060.5984%2031.5996H49.3984C47.1893%2031.5996%2045.3984%2033.3905%2045.3984%2035.5996V41.7996'%20stroke='%23B01736'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e" alt="Добровольное медицинское страхование"/>
+                    <p>Дмс</p>
+                </div>
+                <div class="compensation__item">
+                    <img src="data:image/svg+xml,%3csvg%20width='110'%20height='110'%20viewBox='0%200%20110%20110'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3ccircle%20opacity='0.05'%20cx='55'%20cy='55'%20r='55'%20fill='black'/%3e%3cg%20opacity='0.9'%3e%3cpath%20d='M40.6042%2044.4009C38.5009%2044.4009%2036.8047%2042.7071%2036.8047%2040.6465C36.8047%2040.2617%2036.9723%2039.5836%2037.3193%2038.6693C37.653%2037.7902%2038.1083%2036.8036%2038.5855%2035.8493C39.3936%2034.2333%2040.2405%2032.7577%2040.6043%2032.1362C40.968%2032.7576%2041.815%2034.2335%2042.6232%2035.8497C43.1004%2036.8039%2043.5556%2037.7904%2043.8892%2038.6695C44.2362%2039.5837%2044.4038%2040.2617%2044.4038%2040.6465C44.4038%2042.7065%2042.7075%2044.4009%2040.6042%2044.4009Z'%20stroke='%23B01736'%20stroke-width='2'/%3e%3cpath%20d='M36.8047%2046.3573C36.8047%2045.5842%2037.4314%2044.9575%2038.2045%2044.9575H43.004C43.7771%2044.9575%2044.4038%2045.5842%2044.4038%2046.3573V58.4061H36.8047V46.3573Z'%20stroke='%23B01736'%20stroke-width='2'/%3e%3cpath%20d='M51.2033%2046.3573C51.2033%2045.5842%2051.83%2044.9575%2052.6031%2044.9575H57.4026C58.1757%2044.9575%2058.8024%2045.5842%2058.8024%2046.3573V58.4061H51.2033V46.3573Z'%20stroke='%23B01736'%20stroke-width='2'/%3e%3cpath%20d='M58.8024%2040.6465V40.6468C58.8029%2042.7063%2057.1063%2044.4009%2055.0029%2044.4009C52.8995%2044.4009%2051.2033%2042.7071%2051.2033%2040.6465C51.2033%2040.2617%2051.3709%2039.5836%2051.7179%2038.6693C52.0516%2037.7902%2052.5069%2036.8036%2052.9841%2035.8493C53.7922%2034.2333%2054.6391%2032.7577%2055.0029%2032.1362C55.3666%2032.7576%2056.2137%2034.2335%2057.0218%2035.8497C57.499%2036.8039%2057.9542%2037.7904%2058.2878%2038.6695C58.6348%2039.5837%2058.8024%2040.2617%2058.8024%2040.6465Z'%20stroke='%23B01736'%20stroke-width='2'/%3e%3cpath%20d='M65.6019%2046.3573C65.6019%2045.5842%2066.2286%2044.9575%2067.0017%2044.9575H71.8012C72.5743%2044.9575%2073.201%2045.5842%2073.201%2046.3573V58.4061H65.6019V46.3573Z'%20stroke='%23B01736'%20stroke-width='2'/%3e%3cpath%20d='M69.4015%2044.4009C67.2981%2044.4009%2065.6019%2042.7071%2065.6019%2040.6465C65.6019%2040.2617%2065.7695%2039.5836%2066.1166%2038.6693C66.4502%2037.7902%2066.9055%2036.8036%2067.3827%2035.8493C68.1909%2034.2333%2069.0378%2032.7577%2069.4015%2032.1362C69.7653%2032.7576%2070.6123%2034.2335%2071.4204%2035.8497C71.8976%2036.8039%2072.3528%2037.7904%2072.6865%2038.6695C73.0335%2039.5837%2073.201%2040.2617%2073.201%2040.6465C73.201%2042.7065%2071.5047%2044.4009%2069.4015%2044.4009Z'%20stroke='%23B01736'%20stroke-width='2'/%3e%3cpath%20d='M31.7344%2067.4872L33.8154%2069.1011C34.8291%2069.887%2036.5975%2069.887%2037.6111%2069.1011L39.6928%2067.4872C40.1568%2067.1289%2040.9635%2067.1279%2041.4275%2067.4872L43.5085%2069.1011C44.5566%2069.9137%2046.2599%2069.9122%2047.3048%2069.1011L49.3859%2067.4872C49.8493%2067.1289%2050.6559%2067.1279%2051.1205%2067.4872L53.2022%2069.1011C53.7093%2069.4943%2054.3834%2069.7105%2055.1%2069.7105C55.8172%2069.7105%2056.4915%2069.4938%2056.9992%2069.1011L59.0809%2067.4872C59.5455%2067.1279%2060.3522%2067.1289%2060.8156%2067.4872L62.8966%2069.1011C63.9447%2069.9137%2065.648%2069.9122%2066.6929%2069.1011L68.774%2067.4872C69.2386%2067.1279%2070.0453%2067.1289%2070.5086%2067.4872L72.5903%2069.1011C73.6358%2069.9117%2075.3386%2069.9132%2076.386%2069.1011C77.4334%2068.289%2078.4677%2067.4872%2078.4677%2067.4872'%20stroke='%23B01736'%20stroke-width='2'/%3e%3crect%20x='32.0039'%20y='58.4749'%20width='45.9954'%20height='19.5226'%20rx='3.79954'%20stroke='%23B01736'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e" alt="Выходный в день рождения"/>
+                    <p>Выходный<br/>в день рождения</p>
+                </div>
+                <div class="compensation__item">
+                    <img src="data:image/svg+xml,%3csvg%20width='110'%20height='110'%20viewBox='0%200%20110%20110'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3ccircle%20opacity='0.05'%20cx='55'%20cy='55'%20r='55'%20fill='black'/%3e%3cg%20opacity='0.9'%20clip-path='url(%23clip0_8370_239)'%3e%3crect%20x='39.1992'%20y='32'%20width='31.6'%20height='46'%20rx='4'%20stroke='%23B01736'%20stroke-width='2'/%3e%3cpath%20d='M46.3984%2032H63.5984V36C63.5984%2037.1046%2062.703%2038%2061.5984%2038H48.3984C47.2939%2038%2046.3984%2037.1046%2046.3984%2036V32Z'%20stroke='%23B01736'%20stroke-width='2'/%3e%3cpath%20d='M50.1992%2071H59.7992'%20stroke='%23B01736'%20stroke-width='2'%20stroke-linecap='round'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_8370_239'%3e%3crect%20width='48'%20height='48'%20fill='white'%20transform='translate(31%2031)'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e" alt="Корпоративная мобильная связь"/>
+                    <p>Корпоративная<br/>мобильная связь</p>
+                </div>
+                <div class="compensation__item">
+                    <img src="/assets/sport-DnGF8zJB.svg" alt="Кооперативные скидки"/>
+                    <p>Кооперативные скидки<br/>на спорт</p>
+                </div>
+                <div class="compensation__item">
+                    <img src="/assets/lti-DMTHjLig.svg" alt="LTI"/>
+                    <p>LTI</p>
+                </div>
+            </div>
+            <div class="compensation__line"></div>
+            <h3>Программа дополнительной мотивации</h3>
+            <h4>доплата 12% от суммы</h4>
+
+            <div class="compensation__items">
+                <div class="compensation__item">
+                    <img src="data:image/svg+xml,%3csvg%20width='110'%20height='110'%20viewBox='0%200%20110%20110'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3ccircle%20opacity='0.05'%20cx='55'%20cy='55'%20r='55'%20fill='black'/%3e%3cg%20clip-path='url(%23clip0_8370_261)'%3e%3cpath%20d='M67.7234%2043.7466V32H42.2766V43.7466M40.3205%2069.418L32%2069.4253V49.6117C32%2046.3726%2034.6291%2043.7467%2037.8723%2043.7467H72.1277C75.3709%2043.7467%2078%2046.3726%2078%2049.6117V69.4253L69.6822%2069.418M40.3205%2060.8361H69.6822V78H40.3205V60.8361Z'%20stroke='%23B01736'%20stroke-width='2'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_8370_261'%3e%3crect%20width='48'%20height='48'%20fill='white'%20transform='translate(31%2031)'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e" alt="Оргтехники"/>
+                    <p>Оргтехники</p>
+                </div>
+                <div class="compensation__item">
+                    <img src="data:image/svg+xml,%3csvg%20width='110'%20height='110'%20viewBox='0%200%20110%20110'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3ccircle%20opacity='0.05'%20cx='55'%20cy='55'%20r='55'%20fill='black'/%3e%3cg%20opacity='0.9'%3e%3cpath%20d='M35.0341%2045.3129C35.2802%2043.3072%2036.9836%2041.8%2039.0044%2041.8H72.0023C74.0695%2041.8%2075.7961%2043.3751%2075.9855%2045.4335L78.5982%2073.8281C78.8139%2076.1721%2076.9689%2078.1946%2074.615%2078.1946H35.5207C33.1184%2078.1946%2031.258%2076.092%2031.5505%2073.7075L35.0341%2045.3129Z'%20stroke='%23B01736'%20stroke-width='2'/%3e%3cpath%20d='M55%2050.6367V69.3566'%20stroke='%23B01736'%20stroke-width='2'%20stroke-linecap='round'/%3e%3cpath%20d='M45.1523%2059.9971H64.8447'%20stroke='%23B01736'%20stroke-width='2'%20stroke-linecap='round'/%3e%3cpath%20d='M64.5984%2041.7996V35.5996C64.5984%2033.3905%2062.8076%2031.5996%2060.5984%2031.5996H49.3984C47.1893%2031.5996%2045.3984%2033.3905%2045.3984%2035.5996V41.7996'%20stroke='%23B01736'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e" alt="Добровольное медицинское страхование"/>
+                    <p>Дмс</p>
+                </div>
+                <div class="compensation__item">
+                    <img src="data:image/svg+xml,%3csvg%20width='110'%20height='110'%20viewBox='0%200%20110%20110'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3ccircle%20opacity='0.05'%20cx='55'%20cy='55'%20r='55'%20fill='black'/%3e%3crect%20x='57.9375'%20y='58.8945'%20width='9'%20height='9'%20rx='1'%20stroke='%23B01736'%20stroke-width='2'/%3e%3cpath%20d='M39.1484%2052.2354V66.1177V77.0001C39.1484%2077.5524%2039.5962%2078.0001%2040.1484%2078.0001H69.9329C70.4852%2078.0001%2070.9329%2077.5524%2070.9329%2077.0001V52.2354M53.1484%2078.0001V59.8952C53.1484%2059.3429%2052.7007%2058.8952%2052.1484%2058.8952H45.1484C44.5962%2058.8952%2044.1484%2059.3429%2044.1484%2059.8952V78.0001'%20stroke='%23B01736'%20stroke-width='2'/%3e%3cpath%20d='M33.4476%2052H76.5524C77.915%2052%2078.5201%2050.3298%2077.4597%2049.4956L55.6194%2032.3124C55.0844%2031.8915%2054.3193%2031.8964%2053.79%2032.3241L32.5256%2049.5073C31.4838%2050.3491%2032.0945%2052%2033.4476%2052Z'%20stroke='%23B01736'%20stroke-width='2'/%3e%3c/svg%3e" alt="Ипотеки"/>
+                    <p>Ипотеки</p>
+                </div>
+            </div>
+        </section>
+        <section class="life">
+            <div class="life__header">
+                <h2>Корпоративная жизнь</h2>
+                <div class="life__header__btns">
+                <div class="swiper-button-prev">
+                    <img src="data:image/svg+xml,%3csvg%20width='56'%20height='56'%20viewBox='0%200%2056%2056'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3crect%20width='56'%20height='56'%20rx='28'%20transform='matrix(-1%200%200%201%2056%200)'%20fill='%23F0F0F0'/%3e%3cpath%20d='M33%2018L23%2028L33%2038'%20stroke='%23A30C33'%20stroke-width='2'/%3e%3c/svg%3e" alt="Стрелка влево" />
+                </div>
+                <div class="swiper-button-next">
+                    <img class="rotated" src="data:image/svg+xml,%3csvg%20width='56'%20height='56'%20viewBox='0%200%2056%2056'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3crect%20width='56'%20height='56'%20rx='28'%20transform='matrix(-1%200%200%201%2056%200)'%20fill='%23F0F0F0'/%3e%3cpath%20d='M33%2018L23%2028L33%2038'%20stroke='%23A30C33'%20stroke-width='2'/%3e%3c/svg%3e" alt="Стрелка вправо" />
+                </div>
+                </div>
+            </div>
+
+            <div class="swiper life__swiper">
+                <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img class="life__img" src="/assets/slide1-B5uSAn8k.png" alt="Слайд 1" />
+                </div>
+                <div class="swiper-slide">
+                    <img class="life__img" src="/assets/slide2-T2_ogjOu.png" alt="Слайд 2" />
+                </div>
+                <div class="swiper-slide">
+                    <img class="life__img" src="/assets/slide3-DQlXaDLi.png" alt="Слайд 3" />
+                </div>
+                <div class="swiper-slide">
+                    <img class="life__img" src="/assets/slide4-B-el5m1K.png" alt="Слайд 4" />
+                </div>
+                <div class="swiper-slide">
+                    <img class="life__img" src="/assets/slide5-DmkS1y6E.png" alt="Слайд 5" />
+                </div>
+                </div>
+            </div>
+
+            <div class="life__slider swiper-pagination"></div>
+        </section>
+
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html> 

@@ -1,69 +1,90 @@
 .compensation {
+  @include adaptive-padding-inline(148, 5);
+  @include adaptive-padding-block(80, 24);
+  margin: 100px auto;
+  @include adaptive-margin-block(100, 50);
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  padding-top: 80px;
-  padding-inline: 148px;
-  padding-bottom: 70px;
+  // padding-inline: 148px;
   width: 100%;
   box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.06);
   max-width: 1110px;
-  margin: 100px auto;
+
+  @include mobile-s {
+    padding-inline: 5px; 
+    padding-block: 24px;
+
+  }
+
 
   h2 {
-    font-size: 56px;
+    @include fluid-text(56, 28);
     font-weight: 600;
     line-height: 100%;
-    text-align: center;
+    white-space: nowrap;
   }
 
   h3, h4 {
+    @include fluid-text(40, 22);
     margin: 0;
-    margin-top: 70px;
-    font-size: 40px;
+    @include adaptive-margin-top(70, 24);
     line-height: 120%;
     font-weight: 600;
     text-align: center;
   }
 
   h4 {
+    @include adaptive-margin-bottom(50, 25);
     margin-top: 4px;
     color: var(--c-accent);
-    margin-bottom: 50px;
   }
 
   &__line {
+    @include adaptive-margin-top(75, 24);
     width: 1050px;
     height: 1px;
     background-color: #000000;
-    margin-top: 75px;
     opacity: 0.1;
+
+    @include desktop {
+      width: 100%;
+    }
   }
 
   &__items {
+    width: 100%;
     display: flex;
+    justify-content: center;
+    // flex-wrap: wrap;
     column-gap: 16px;
+
+    @include desktop {
+      flex-wrap: wrap;
+      column-gap: 10px;
+      row-gap: 25px;
+    }
   }
 
   &__item {
+    @include adaptive-width(178, 120);
+    @include adaptive-height(160, 126); 
 
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 178px;
-    height: 160px;
 
 
     img {
-      width: 110px;
-      height: 110px;
+      @include adaptive-width(110, 80);
+      aspect-ratio: 1;
     }
 
     p {
+      @include fluid-text(18, 16);
       width: 100%;
       text-align: center;
-      font-size: 18px;
       line-height: 110%;
     }
   }

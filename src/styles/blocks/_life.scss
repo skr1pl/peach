@@ -10,8 +10,7 @@
     justify-content: space-between;
 
     h2 {
-      font-weight: 600;
-      font-size: 56px;
+      @include fluid-text(56, 28);
       line-height: 100%;
     }
 
@@ -48,6 +47,11 @@
         height: 56px;
         height: auto;
         transform: none;
+
+        @include mobile {
+          display: none;
+          opacity: 0;
+        }
       }
 
       .swiper-button-next.rotated img {
@@ -72,11 +76,13 @@
 
 
     .swiper-pagination-bullet {
-      width: 214px;
-      height: 6px;
+      @include adaptive-width(214, 70);
+      @include adaptive-height(6, 3);
+      // width: 214px;
+      // height: 6px;
       background-color: #000000;
       opacity: 0.1;
-      border-radius: 3px;
+      border-radius: 0px;
       margin: 0 !important;
       transition: opacity 0.3s, background-color 0.3s;
     }

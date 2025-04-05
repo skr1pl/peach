@@ -1,21 +1,41 @@
 .mission {
+  @include adaptive-height(471, 186);
+  @include adaptive-margin-top(100, 50);
   text-align: center;
   color: #ffffff;
   width: 100%;
-  height: 471px;
+
   background-color: var(--c-accent-alt);
-  margin-top: 100px;
-  padding-top: 139px;
-  padding-bottom: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
 
   h2 {
-    font-size: 56px;
+    @include fluid-text(56, 28);
     font-weight: 600;
   }
 
   p {
-    font-size: 32px;
+    @include fluid-text(32, 16);
     font-weight: 400;
     line-height: 150%;
+  }
+
+  &__left, &__right {
+    width: 20%;
+    aspect-ratio: 1;
+    position: absolute; 
+    top: 10%;
+    opacity: 0.4;
+  }
+
+  &__left {
+    left: 0;
+  }
+
+  &__right {
+    right: 0;
   }
 }

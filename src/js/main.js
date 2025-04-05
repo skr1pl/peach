@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     button.addEventListener("click", function () {
         panel.classList.toggle("active");
+        button.classList.toggle("active");
     });
 });
 
@@ -103,8 +104,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-
-    // Панель по кнопке
     const toggleBtn = document.getElementById('toggleCities');
     const panel = document.getElementById('mapPanel');
 
@@ -120,4 +119,40 @@ document.addEventListener('DOMContentLoaded', () => {
     toggleBtn.addEventListener('click', () => {
         mapPanel.classList.toggle('active');
     });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const moscowBtn = document.getElementById('moscowBtn');
+    const centerBtn = document.getElementById('centerBtn');
+    const southBtn = document.getElementById('southBtn');
+    const volgaBtn = document.getElementById('volgaBtn');
+    const uralBtn = document.getElementById('uralBtn');
+    const siberiaBtn = document.getElementById('siberiaBtn');
+    const eastBtn = document.getElementById('eastBtn');
+    const northwestBtn = document.getElementById('northwestBtn');
+
+    const moscow = document.getElementById('moscow');
+    const center = document.getElementById('center');
+    const south = document.getElementById('south');
+    const volga = document.getElementById('volga');
+    const ural = document.getElementById('ural');
+    const siberia = document.getElementById('siberia');
+    const east = document.getElementById('east');
+    const northwest = document.getElementById('northwest');
+
+    const btns = [moscowBtn, centerBtn, southBtn, volgaBtn, uralBtn, siberiaBtn, eastBtn, northwestBtn];
+    const regions = [moscow, center, south, volga, ural, siberia, east, northwest];
+
+    let lastIndex = null;
+
+    btns.map((btn, index) => {
+        btn.addEventListener('click', () => {
+            if (lastIndex && lastIndex !== index) {
+                regions[lastIndex].classList.toggle('actived');
+            }
+            regions[index].classList.toggle('actived');
+            lastIndex = (lastIndex === index) ? null : index;
+        })
+    })
+
 });

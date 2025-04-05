@@ -13,6 +13,17 @@ export default defineConfig({
         }
     },
     server: {
-        open: true
+        open: true,
+        port: 3000
+    },
+    css: {
+        preprocessorOptions: {
+            scss: {
+                additionalData: `
+                    @import "./src/styles/utils/_variables.scss";
+                    @import "./src/styles/utils/_mixins.scss";
+                `
+            }
+        }
     }
 }); 

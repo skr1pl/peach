@@ -1,26 +1,46 @@
 .directions {
-  margin-top: 100px;
+  @include adaptive-margin-top(100, 50);
+  width: 100%;
 
   h2 {
-    font-size: 56px;
+    @include fluid-text(56, 28);
     font-weight: 600;
     line-height: 100%;
     text-align: center;
   }
 
   &__navigator {
-    margin-top: 55px;
+    @include adaptive-margin-top(55, 15);
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
     column-gap: 20px;
     row-gap: 22px;
+
+    @include desktop {
+        justify-content: center;
+    }
 
 
     &__item {
         width: 615px;
         height: 260px;
+        @include adaptive-width(615, 280);
+        @include adaptive-height(260, 90);
         position: relative; 
         overflow: hidden;
+
+        @include desktop {
+            @include adaptive-width(615, 280);
+            @include adaptive-height(260, 90);
+        }
+
+        @include tablet {
+            width: 100%;
+            height: 90px;
+            transition-duration: 0.5s;
+        }
 
         &:hover {
             .directions__navigator__item__text {
@@ -34,10 +54,23 @@
                     transform: translateY(0);
                 }
             }
+
+            @include tablet {
+                height: 240px;
+                
+                .directions__navigator__item__text {
+                    padding-right: 16px;
+
+                    img {
+                        transform: rotate(180deg);
+                        transition-duration: 0.5s;
+                    }
+                }
+            }
         }
 
 
-        img {
+        &__img {
         position: absolute;
         z-index: -1000;
         top: 0;
@@ -48,38 +81,62 @@
         }
 
         &__text {
+            height: 80px;
             position: absolute; 
             bottom: 0; 
             left: 0;
             width: 100%;
-            height: 80px;
             background-color: rgba(45, 54, 83, 0.6);
             padding-left: 15px;
             color: #ffffff;
             padding: 28px 20px;
             padding-right: 115px;
-            transition: all 0.3s ease;
+            // transition: all 0.3s ease;
+
+            @include tablet {
+                height: 90px;
+                padding-right: 16px;
+            }
 
             &--small-padding {
                 padding: 16px 20px;
             }
 
             h3 {
+                @include fluid-text(24, 20);
                 margin: 0;
-                font-size: 24px;
                 font-weight: 600;
                 line-height: 100%; 
             }
 
             p {
+                @include fluid-text(17, 16);
                 visibility: hidden;
                 opacity: 0;
                 transform: translateY(-20px);
                 font-weight: 400;
-                font-size: 17px;
                 line-height: 140%;
                 margin-top: 20px;
                 transition: all 0.3s ease;
+            }
+
+            &__title {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                img {
+                    display: none;
+                    opacity: 0;
+                    width: 36px;
+                    height: 36px;
+
+                    @include tablet {
+                        display: flex;
+                        position: relative;
+                        opacity: 1;
+                    }
+                }
             }
         }
     }

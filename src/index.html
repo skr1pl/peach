@@ -23,7 +23,30 @@
     <main>
         <section class="hero container">
             <h1 class="hero__title">Softline</h1>
-            <p class="hero__description">Ведущий поставщик IT-решений и сервисов.* Мы предлагаем комплексные IT-решения,<br/> облака, программное и аппаратное обеспечение, решения по цифровой <br/> трансформации и кибербезопасности, а также широкий спектр IT-услуг.</p>
+            <p class="hero__description">Ведущий поставщик IT-решений и сервисов.* Мы предлагаем комплексные IT-решения, облака, программное и аппаратное обеспечение, решения по цифровой  трансформации и кибербезопасности, а также широкий спектр IT-услуг.</p>
+        </section>
+
+        <section class="numbers container">
+            <div class="numbers__item">
+                <h3>>30 лет</h3>
+                <p>на IT-рынке</p>
+            </div>
+            <div class="numbers__item">
+                <h3>4600</h3>
+                <p>сотрудников в России</p>
+            </div>
+            <div class="numbers__item">
+                <h3>25</h3>
+                <p>городов России</p>
+            </div>
+            <div class="numbers__item">
+                <h3>2000+</h3>
+                <p>разработчиков</p>
+            </div>
+            <div class="numbers__item">
+                <h3>3000+</h3>
+                <p>сотрудников ежегодно проходят оценку и обучение</p>
+            </div>
         </section>
 
         <section class="map container">
@@ -45,31 +68,54 @@
                 </nav>
             </div>
             <div class="map__panel container" id="mapPanel">
-                <div class="map__panel__column">
-                    <p>Москва</p>
+                <div id="moscow" class="map__panel__column">
+                    <button class="map__panel__column__btn" id="moscowBtn">
+                        <p>Москва</p>
+                        <img src="./assets/svg/arrow-down-panel.svg" alt='Стрелка вниз'/>
+                    </button>
                 </div>
-                <div class="map__panel__column">
-                    <p>Центр</p>
+                <div id="center" class="map__panel__column">
+                    <button class="map__panel__column__btn" id="centerBtn">
+                        <p>Центр</p>
+                        <img src="./assets/svg/arrow-down-panel.svg" alt='Стрелка вниз'/>
+                    </button>
                     <p>Воронеж</p>
                     <p>Ярославль</p>
                     <p>Белгород</p>
                 </div>
-                <div class="map__panel__column">
-                    <p>Юг</p>
+                <div id="northwest" class="map__panel__column">
+                    <button class="map__panel__column__btn" id="northwestBtn">
+                        <p>Северо-Запад</p>
+                        <img src="./assets/svg/arrow-down-panel.svg" alt='Стрелка вниз'/>
+                    </button>
+                    <p>Санкт-Петербург</p>
+                    <p>Калининград</p>
+                </div>
+                <div id="south" class="map__panel__column">
+                    <button class="map__panel__column__btn" id="southBtn">
+                        <p>Юг</p>
+                        <img src="./assets/svg/arrow-down-panel.svg" alt='Стрелка вниз'/>
+                    </button>
                     <p>Ростов-на-Дону</p>
                     <p>Краснодар</p>
                     <p>Волгоград</p>
                 </div>
-                <div class="map__panel__column">
-                    <p>Волга</p>
+                <div id="volga" class="map__panel__column">
+                    <button class="map__panel__column__btn" id="volgaBtn">
+                        <p>Волга</p>
+                        <img src="./assets/svg/arrow-down-panel.svg" alt='Стрелка вниз'/>
+                    </button>
                     <p>Казань</p>
                     <p>Самара</p>
                     <p>Уфа</p>
                     <p>Оренбург</p>
                     <p>Нижний Новгород</p>
                 </div>
-                <div class="map__panel__column">
-                    <p>Урал</p>
+                <div id="ural" class="map__panel__column">
+                    <button class="map__panel__column__btn" id="uralBtn">
+                        <p>Урал</p>
+                        <img src="./assets/svg/arrow-down-panel.svg" alt='Стрелка вниз'/>
+                    </button>
                     <p>Екатеринбург</p>
                     <p>Челябинск</p>
                     <p>Пермь</p>
@@ -77,16 +123,22 @@
                     <p>Тюмень</p>
                     <p>Ижевск</p>
                 </div>
-                <div class="map__panel__column">
-                    <p>Сибирь</p>
+                <div id="siberia" class="map__panel__column">
+                    <button class="map__panel__column__btn" id="siberiaBtn">
+                        <p>Сибирь</p>
+                        <img src="./assets/svg/arrow-down-panel.svg" alt='Стрелка вниз'/>
+                    </button>
                     <p>Новосибирск</p>
                     <p>Омск<p>
                     <p>Томск</p>
                     <p>Красноярск</p>
                     <p>Иркутск</p>
                 </div>
-                <div class="map__panel__column">
-                    <p>Дальний восток</p>
+                <div id="east" class="map__panel__column">
+                    <button class="map__panel__column__btn" id="eastBtn">
+                        <p>Дальний восток</p>
+                        <img src="./assets/svg/arrow-down-panel.svg" alt='Стрелка вниз'/>
+                    </button>
                     <p>Хабаровск</p>
                     <p>Владивосток<p>
                 </div>
@@ -95,6 +147,8 @@
         </section>
 
         <section class="mission container">
+            <img class="mission__left" src="./assets/svg/Left pattern.svg" alt="Левый патерн"/>
+            <img class="mission__right" src="./assets/svg/Right pattern.svg" alt="Правый патерн"/>
             <h2 class="mission__title">Миссия Softline</h2>
             <p class="mission__text">Мы помогаем организациям трансформироваться, работать эффективно и безопасно <br/> в условиях цифровой экономики.</p>
         </section>
@@ -103,9 +157,12 @@
             <h2>Направления бизнесса</h2>
             <div class="directions__navigator">
                 <div class="directions__navigator__item">
-                    <img src ="assets/img/softline_solutions.png" alt="Решения softline">
+                    <img class="directions__navigator__item__img" src ="assets/img/softline_solutions.png" alt="Решения softline">
                     <div class="directions__navigator__item__text">
-                        <h3>Решения Softline</h3>
+                        <div class="directions__navigator__item__text__title">
+                            <h3>Решения Softline</h3>
+                            <img src="./assets/svg/arrow-down-white.svg" alt="Стрелка вниз">
+                        </div>
                         <p>
                             ГК Softline предлагает клиентам собственную линейку оборудования (ПК, серверы, торговое оборудование и проч.), разработку программных продуктов, облачных решений, решений в области информационной безопасности.
                         </p>
@@ -113,37 +170,52 @@
                     </div>
                 </div>
                 <div class="directions__navigator__item">
-                    <img src ="assets/img/cybersecurity.png" alt="Кибербезопасность"/>
+                    <img class="directions__navigator__item__img" src ="assets/img/cybersecurity.png" alt="Кибербезопасность"/>
                     <div class="directions__navigator__item__text">
-                        <h3>Кибербезопасность</h3>
+                        <div class="directions__navigator__item__text__title">
+                            <h3>Кибербезопасность</h3>
+                            <img src="./assets/svg/arrow-down-white.svg" alt="Стрелка вниз"/>
+                        </div>
                         <p>Softline обладает всеми необходимыми государственными лицензиями для организации проектов по информационной безопасности и аттестации. </p>
                     </div>
                 </div>
                 <div class="directions__navigator__item">
-                    <img src ="assets/img/import_substitution.png" alt="Импортозамещение"/>
+                    <img class="directions__navigator__item__img" src ="assets/img/import_substitution.png" alt="Импортозамещение"/>
                     <div class="directions__navigator__item__text">
-                        <h3>Импортозамещение</h3>
+                        <div class="directions__navigator__item__text__title">
+                            <h3>Импортозамещение</h3>
+                            <img src="./assets/svg/arrow-down-white.svg" alt="Стрелка вниз"/>
+                        </div>
                         <p>ГК Softline обладает широчайшим портфелем решений и услуг для импортозамещения, включая ПО и оборудование собственного производства.</p>
                     </div>
                 </div>
                 <div class="directions__navigator__item">
-                    <img src ="assets/img/cloud_solutions.png" alt="Облачные решения"/>
+                    <img class="directions__navigator__item__img" src ="assets/img/cloud_solutions.png" alt="Облачные решения"/>
                     <div class="directions__navigator__item__text">
-                        <h3>Облачные решения</h3>
+                        <div class="directions__navigator__item__text__title">
+                            <h3>Облачные решения</h3>
+                            <img src="./assets/svg/arrow-down-white.svg" alt="Стрелка вниз"/>
+                        </div>
                         <p>Softline использует современные облачные решения как российских, так и международных вендоров для масштабирования бизнеса своих клиентов. Подписки, услуги, трансформация.</p>
                     </div>
                 </div>
                 <div class="directions__navigator__item">
-                    <img src ="assets/img/digital_transformation.png" alt="Цифровая трансформация и разработка ПО"/>
+                    <img class="directions__navigator__item__img" src ="assets/img/digital_transformation.png" alt="Цифровая трансформация и разработка ПО"/>
                     <div class="directions__navigator__item__text directions__navigator__item__text--small-padding">
-                        <h3>Цифровая трансформация <br/> и разработка ПО</h3>
+                        <div class="directions__navigator__item__text__title">
+                            <h3>Цифровая трансформация <br/> и разработка ПО</h3>
+                            <img src="./assets/svg/arrow-down-white.svg" alt="Стрелка вниз"/>
+                        </div>
                         <p>Softline использует современные технологи и новые возможности для увеличения производительности бизнеса заказчика. В штате ГК Softline - 2000+ разработчиков, которые трансформируют ПО под нужды конкретного предприятия.</p>
                     </div>
                 </div>
                 <div class="directions__navigator__item">
-                    <img src ="assets/img/technical_support.png" alt="Техническая поддержка Softline"/>
+                    <img class="directions__navigator__item__img" src ="assets/img/technical_support.png" alt="Техническая поддержка Softline"/>
                     <div class="directions__navigator__item__text">
-                        <h3>Техническая поддержка Softline</h3>
+                        <div class="directions__navigator__item__text__title">
+                            <h3>Техническая поддержка Softline</h3>
+                            <img src="./assets/svg/arrow-down-white.svg" alt="Стрелка вниз"/>
+                        </div>
                         <p>200+ инженеров, 24 часа в сутки, 7 дней в неделю, 12 месяцев в году, сервисное партнерство с 30+ мировыми производителями.</p>
                     </div>
                 </div>

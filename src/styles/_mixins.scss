@@ -1,5 +1,5 @@
 @mixin fluid-text($max: 48, $min: 16) {
-  font-size: clamp(#{$min}px, #{$max / 1440 * 100}vw, #{$max}px);
+  font-size: clamp(#{$min}px, #{calc($max / 1920) * 100}vw, #{$max}px);
 }
   
 @mixin reset-link {
@@ -41,15 +41,47 @@
 }
 
 @mixin adaptive-width($max, $min) {
-  width: clamp(#{$min}px, #{$max / 1440 * 100}vw, #{$max}px);
+  width: clamp(#{$min}px, #{calc($max / 1920) * 100}vw, #{$max}px);
 }
 
 @mixin adaptive-height($max, $min) {
-  height: clamp(#{$min}px, #{$max / 1440 * 100}vw, #{$max}px);
+  height: clamp(#{$min}px, #{calc($max / 1920) * 100}vw, #{$max}px);
 }
 
 @mixin adaptive-padding($max, $min) {
-  padding: clamp(#{$min}px, #{$max / 1440 * 100}vw, #{$max}px);
+  padding: clamp(#{$min}px, #{calc($max / 1920) * 100}vw, #{$max}px);
+}
+
+@mixin adaptive-padding-block($max, $min) {
+  padding-block: clamp(#{$min}px, #{calc($max / 1920) * 100}vw, #{$max}px);
+}
+
+@mixin adaptive-padding-bottom($max, $min) {
+  padding-block: clamp(#{$min}px, #{calc($max / 1920) * 100}vw, #{$max}px);
+}
+
+@mixin adaptive-margin-block($max, $min) {
+  margin-block: clamp(#{$min}px, #{calc($max / 1920) * 100}vw, #{$max}px);
+}
+
+@mixin adaptive-padding-inline($max, $min) {
+  padding-inline: clamp(#{$min}px, #{calc($max / 1920) * 100}vw, #{$max}px);
+}
+
+@mixin adaptive-padding-top($max, $min) {
+  padding-top: clamp(#{$min}px, #{calc($max / 1920) * 100}vw, #{$max}px);
+}
+
+@mixin adaptive-margin-top($max, $min) {
+  margin-top: clamp(#{$min}px, #{calc($max / 1920) * 100}vw, #{$max}px);
+}
+
+@mixin adaptive-margin-bottom($max, $min) {
+  margin-bottom: clamp(#{$min}px, #{calc($max / 1920) * 100}vw, #{$max}px);
+}
+
+@mixin adaptive-margin-left($max, $min) {
+  margin-left: clamp(#{$min}px, #{calc($max / 1920) * 100}vw, #{$max}px);
 }
   
 @mixin visually-hidden {
