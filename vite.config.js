@@ -3,7 +3,7 @@ import { resolve } from 'path';
 
 export default defineConfig({
     root: 'src',
-    base: '/peach-project/',
+    base: '/peach/',
     build: {
         outDir: '../dist',
         emptyOutDir: true,
