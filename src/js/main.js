@@ -10,11 +10,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", () => {
     const images = [
-        "assets/img/slide1.png",
-        "assets/img/slide2.png",
-        "assets/img/slide3.png",
-        "assets/img/slide4.png",
-        "assets/img/slide5.png"
+        "./assets/img/slide1.png",
+        "./assets/img/slide2.png",
+        "./assets/img/slide3.png",
+        "./assets/img/slide4.png",
+        "./assets/img/slide5.png"
     ];
 
     let currentIndex = 0;
