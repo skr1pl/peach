@@ -11,4 +11,3 @@ import 'swiper/css/pagination';
 // Импорт модулей
 import './modules/map';
 import './modules/slider';
-import './modules/compensation'; 

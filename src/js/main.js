@@ -1,3 +1,13 @@
+import allMap from '../assets/img/all_map.png';
+import moscowMap from '../assets/img/moscow_map.png';
+import middleMap from '../assets/img/middle_map.png';
+import northwestMap from '../assets/img/northwest_map.png';
+import southMap from '../assets/img/south_map.png';
+import volgaMap from '../assets/img/volga_map.png';
+import uralMap from '../assets/img/ural_map.png';
+import siberiaMap from '../assets/img/siberia_map.png';
+import farEastMap from '../assets/img/far_east_map.png';
+
 document.addEventListener("DOMContentLoaded", function () {
     const button = document.querySelector("#toggleCities");
     const panel = document.querySelector("#mapPanel");
@@ -78,15 +88,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const mapImage = document.getElementById('mapImage');
 
     const regionToImage = {
-        'Все': './assets/img/all_map.png',
-        'Москва': './assets/img/moscow_map.png',
-        'Центр': './assets/img/middle_map.png',
-        'Северо-Запад': './assets/img/northwest_map.png',
-        'Юг': './assets/img/south_map.png',
-        'Волга': './assets/img/volga_map.png',
-        'Урал': './assets/img/ural_map.png',
-        'Сибирь': './assets/img/siberia_map.png',
-        'Дальний восток': './assets/img/far_east_map.png'
+        'Все': allMap,
+        'Москва': moscowMap,
+        'Центр': middleMap,
+        'Северо-Запад': northwestMap,
+        'Юг': southMap,
+        'Волга': volgaMap,
+        'Урал': uralMap,
+        'Сибирь': siberiaMap,
+        'Дальний восток': farEastMap
     };
 
     tabs.forEach(tab => {
